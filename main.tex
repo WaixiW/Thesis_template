@@ -1,0 +1,106 @@
+\documentclass[12pt]{report}
+\input{tikz_styles}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{epsfig} %
+\usepackage{ tipa }
+\usepackage{ textcomp }
+\usepackage{float}
+\usepackage{ dsfont }
+\usepackage{multirow}
+\usepackage{ltablex}
+\usepackage{siunitx}
+\usepackage{subfloat}
+\usepackage{pdfpages}
+\usepackage{moreverb,url}
+\usepackage{cite}
+\usepackage{makecell}
+%\SIsetup{table-format=-2.0, table-number-alignment=center}
+%\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=red,urlcolor=red]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue,]{hyperref}
+\usepackage[ruled,vlined,noresetcount]{algorithm2e}
+\usepackage[noend]{algpseudocode}
+\usepackage[
+font=footnotesize %
+]{subfig}
+
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{bm}
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\SetKwFunction{KwFn}{Fn}
+%\SetKwProg{Fn}{Function}{}{}
+\linespread{1.5}
+
+\setlength{\topmargin}{-0.5cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\oddsidemargin}{1.5cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\textwidth}{14.4cm}
+\setlength{\headsep}{0in}
+\setlength{\parskip}{.15in}
+\setlength{\parindent}{0in}
+
+\usepackage{setspace} %
+
+\usepackage{nomencl}
+\makenomenclature
+\renewcommand{\nomname}{ABBREVIATIONS}
+
+\definecolor{Mycolor2}{HTML}{1560BD}
+\newcommand{\colorit}[1]{{\color{Mycolor2}{#1}}}
+\usepackage{xcolor}
+\definecolor{mediumBlue}{rgb}{0.15,0.15,0.75}
+\definecolor{darkBlue}{rgb}{0,0,0.5}
+
+
+\usepackage{float}
+\usepackage{tikz,xcolor}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+\usepackage{bibentry}
+\usepackage[numbers,sort&compress,sectionbib]{natbib}
+%\usepackage{chapterbib}
+\DeclareMathOperator{\tr}{Tr}
+
+%\bibliographystyle{ieeetr}
+
+
+
+\newcommand{\thesisWriter}{XXX}
+\newcommand{\ThesisTitle}{\Large\bf Thesis title goes here}
+
+\begin{document}
+
+\include{preliminary}
+
+\newpage
+\addcontentsline{toc}{chapter}{Abbreviations}
+\printnomenclature[1in]
+
+\newpage
+\pagenumbering{arabic}
+
+
+
+\include{abstract}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+
+\newpage
+\renewcommand*{\bibname}{\section*{\refname}}%
+\include{Reference}
+
+\newpage
+\renewcommand*{\bibname}{\section*{\refname}}%
+\include{publications}
+
+\end{document}

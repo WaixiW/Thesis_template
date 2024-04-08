@@ -1,0 +1,18 @@
+\usepackage{pgfplots}
+
+\pgfplotsset{
+	curve plot style/.style={
+		xlabel={N - Number of top database candidates},
+		xmin=0, xmax=25,
+		xtick={0,5,10,15,20,25},
+		ytick={45,50,55,60,65,70,75,80,85,90,95,100},
+		legend pos=south east,
+		ymajorgrids=true,     xmajorgrids=true,
+		grid style=dashed,
+		ylabel={Recall@N (\%)},
+		ylabel style={yshift=-.3cm},
+		width=8.5cm,
+		height=10cm,
+	},
+}
+
