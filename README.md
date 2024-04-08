@@ -15,5 +15,4 @@ You can add your digital signature. Just update the `includes/sign.png` file.
 
 
 
-## Thanks
 # Thesis_template
